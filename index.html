@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <form method="get" onsubmit="added()">
+    <label for="name">FirstName:</label><input type="text" id="name"><br>
+    <label for="lastname">LastName:</label><input type="text" id="lastname"><br>
+    <label for="gmail">Email:</label><input type="email" id="gmail"><br>
+    <label for="pass">Password:</label><input type="password" id="pass"><br>
+    <button type="submit">submit</button>
+    <script>
+    function added() {
+
+        var name = document.getElementById( "name").value
+        var lastname = document.getElementById( "lastname" ).value
+        var gmail = document.getElementById( "gmail" ).value
+        var pass = document.getElementById( "pass" ).value
+
+        localStorage.setItem( 'name', name );
+        localStorage.setItem( 'lastname', lastname );
+        localStorage.setItem( 'gmail', gmail );
+        localStorage.setItem( 'pass', pass );
+        alert( 'the form added' )
+      }
+    </script>
+  
+</body>
+
+</html>
